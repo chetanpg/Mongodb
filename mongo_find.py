@@ -36,4 +36,4 @@ cursor=Collection.find(query).limit(2)
 for doc in cursor:
       for key,value in doc.items():
          print("key:%s,Value:%s" %(key,value))
-quit()
+quit() 
