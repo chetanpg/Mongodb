@@ -10,6 +10,8 @@ import pymongo
 
 #this information can be recevied from screen or in a file or as a command line
 # parameters.For simplicity it is hardcoded in this sample program
+#program is tested using local Mongodb server but you can change these values as required 
+
 userid="admin"
 pswd="password"
 server="localhost"
@@ -31,7 +33,6 @@ Collection= db[collection]
 query={}
 #use limit / sort on cursor as needed
 cursor=Collection.find(query).limit(2)
-sanity = 0
 for doc in cursor:
       for key,value in doc.items():
          print("key:%s,Value:%s" %(key,value))
