@@ -25,13 +25,12 @@ def dbconn():
     except:
       print("Connection error , please provide correct information")
       quit()
+    return db
 
+def findrec(db):
     #set the collection , in this case Cars
     collection = "cars"
     Collection= db[collection]
-    return Collection
-
-def findrec(Collection):
     #set the query , in this case it is empty but this is the place to set the query needed
     query={}
     #use limit / sort on cursor as needed
@@ -43,6 +42,6 @@ def findrec(Collection):
     return
 
 if __name__ == '__main__':
-    Collection=dbconn()
-    findrec(Collection)
+    db=dbconn()
+    findrec(db)
     quit()
