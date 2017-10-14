@@ -35,11 +35,10 @@ def findrec(db):
     query={}
     #use limit / sort on cursor as needed
     cursor=Collection.find(query).limit(10)
-    sanity = 0
     for doc in cursor:
-          print("-------Record--------")
-          for key,value in doc.items():
-             print("key:%s,Value:%s" %(key,value))
+      print("-------Record--------")
+      for key,value in doc.items():
+         print("key:%s,Value:%s" %(key,value))
     return
 
 if __name__ == '__main__':
